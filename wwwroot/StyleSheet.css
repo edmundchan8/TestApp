@@ -1,0 +1,92 @@
+﻿body {
+    background-color: cornsilk;
+}
+
+
+/********       ALIGNMENT      ********/
+
+.text-align-right {
+    text-align: right;
+}
+
+
+/********       FONTS      ********/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'LemonMilk';
+}
+
+p {
+    font-family: 'Sanford';
+}
+
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/Fonts/LEMONMILK-Medium.otf'); /* IE9 Compat Modes */
+    src: url('/Fonts/LEMONMILK-Medium.otf') format('embedded-opentype'), /* IE6-IE8 */
+    url('/Fonts/LEMONMILK-Medium.otf') format('woff'), /* Modern Browsers */
+    url('/Fonts/LEMONMILK-Medium.otf') format('truetype'), /* Safari, Android, iOS */
+    url('/Fonts/LEMONMILK-Medium.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Sanford';
+    src: url('/Fonts/Sanford-0103_demo.otf'); /* IE9 Compat Modes */
+    src: url('/Fonts/Sanford-0103_demo.otf') format('embedded-opentype'), /* IE6-IE8 */
+    url('/Fonts/Sanford-0103_demo.otf') format('woff'), /* Modern Browsers */
+    url('/Fonts/Sanford-0103_demo.otf') format('truetype'), /* Safari, Android, iOS */
+    url('/Fonts/Sanford-0103_demo.otf') format('svg'); /* Legacy iOS */
+}
+
+
+/******** Top Table ******/
+
+table#top-table {
+    margin: auto;
+    width: 30%;
+}
+
+#top-table {
+    text-align: center;
+}
+
+th#top-table {
+    font-weight: bold;
+}
+
+/******** Lower Table ******/
+
+.text-align-center {
+    text-align: center;
+}
+
+table#lower-table {
+    margin: auto;
+    width: 55%;
+}
+
+th#lower-table {
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+td {
+    height: 50px;
+    padding: 0px 20px;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+
+
+/********      PADDING & MARGIN    *********/
+
+body {
+    margin-left: 10px;
+}

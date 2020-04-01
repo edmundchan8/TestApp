@@ -1,0 +1,106 @@
+﻿@model TestApp.Models.TimeKeeperModel;
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@{
+    Layout = "_Layout";
+}
+<h1>Time Keeper</h1>
+
+<p>This is my Time Keeper app</p>
+
+
+<table id="top-table">
+    <tr>
+        <th>Hours Worked</th>
+        <th>Hours Left to work</th>
+        <th>Overtime?</th>
+    </tr>
+    <tr>
+        <td>0.00</td>
+        <td>40.00</td>
+        <td>0</td>
+    </tr>
+</table>
+<br />
+<br />
+<form asp-action="Index">
+    <table id="lower-table">
+        <tr>
+            <th class="text-align-center">Day</th>
+            <th class="text-align-center">Start Time</th>
+            <th class="text-align-center">End Time</th>
+            <th class="text-align-center">Total Duration</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td style="text-align:right;">
+                <input asp-for="MondayStart" value=@Model.MondayStart style="text-align :right;" />
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td style="text-align:right;">
+                <input type="text" value="0.00" style="text-align:right;">
+            </td>
+            <td class="text-align-right">0.00</td>
+        </tr>
+    </table>
+    <input type="submit" value="Calculate">
+</form>
+<p><a asp-controller="Admin" asp-action="Index">Click here to return to the main page</a></p>
