@@ -13,7 +13,8 @@ namespace TestApp.Controllers
         public IActionResult Index()
         {
             TimeKeeperModel timeKeeperModel = new TimeKeeperModel {
-                MondayStart = 0.00M
+                MondayStartHour = 0,
+                MondayStartMinute = 00
             };
             return View("Index", timeKeeperModel);
         }
@@ -21,11 +22,18 @@ namespace TestApp.Controllers
         [HttpPost]
         public IActionResult Index(TimeKeeperModel tkm)
         {
-            TimeKeeperModel timeKeeperModel = new TimeKeeperModel {
-                MondayStart = tkm.MondayStart
-            };
+            if (ModelState.IsValid)
+            {
+                TimeKeeperModel timeKeeperModel = new TimeKeeperModel
+                {
+                    MondayStartHour = tkm.MondayStartHour,
+                    MondayStartMinute = tkm.MondayStartMinute,
 
-            return View("Index", timeKeeperModel);
+                };
+                return View("Index", timeKeeperModel);
+            }
+            else
+                return View(tkm);
         }
 
     }

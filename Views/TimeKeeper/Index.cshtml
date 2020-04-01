@@ -33,7 +33,10 @@
         <tr>
             <td>Monday</td>
             <td style="text-align:right;">
-                <input asp-for="MondayStart" value=@Model.MondayStart style="text-align :right;" />
+                <input asp-for="MondayStartHour" value=@Model.MondayStartHour style="text-align :right; width: 30px;" /> :
+                <input asp-for="MondayStartMinute" value=@Model.MondayStartMinute style="text-align :right; width: 30px;" />
+                <span asp-validation-for="MondayStartHour" class="text-danger" style="text-align :left;"></span><br />
+                <span asp-validation-for="MondayStartMinute" class="text-danger" style="text-align :left;"></span>
             </td>
             <td style="text-align:right;">
                 <input type="text" value="0.00" style="text-align:right;">
@@ -56,7 +59,7 @@
                 <input type="text" value="0.00" style="text-align:right;">
             </td>
             <td style="text-align:right;">
-                <input type="text" value="0.00" style="text-align:right;">
+                <input type="text" value="0.00" style="text-align: right;">
             </td>
             <td class="text-align-right">0.00</td>
         </tr>
